@@ -3,5 +3,5 @@ uuurl="https://zbios2.oss-cn-hongkong.aliyuncs.com/ios2.ipa"
 while true
 do
 z=$[$RANDOM%12]
-wget -O /dev/null -o /dev/null -U=${UAs[$z]} $uuurl &
+wget -O /dev/null -o /dev/null -U=${UAs[$z]} $uuurl
 done
