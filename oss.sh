@@ -2,5 +2,5 @@ UAs=("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 while true
 do
 z=$[$RANDOM%12]
-wget -O /dev/null -o /dev/null -U ${UAs[$z]} $uuurl
+wget -O /dev/null -o /dev/null -U ${UAs[$z]} $uuurl &
 done
