@@ -13,20 +13,51 @@ do
         r=$OPTARG
         ;;
         s)
-        kill -9 `ps -a |grep -v "grep" |grep -v "oss.sh" |grep -E 'bash|curl' |awk '{print $1}'`
-        exit 1
+        stop_
         ;;
         ?)
         echo -e "\e[93m[用法]\n\e[93m[下载] \e[92mcurl \e[91m-Lo \e[96moss.sh \e[96mgit.io/jhoss\e[0m"
         echo -e "\e[93m[参数] \e[91m-l \e[96m<链接(必须)> \e[91m-t \e[96m<线程数> \e[91m-r \e[96m<Referer> \e[91m-s \e[96m<终止>\n\e[0m"
-        echo -e '\e[93m[示例1] \e[92mbash \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[0m'
-        echo -e '\e[93m[示例2] \e[92mbash \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[0m'
-        echo -e '\e[93m[示例3] \e[92mbash \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[91m-r \e[96m"https://www.baidu.com"\e[0m'
-		echo -e '\e[93m[示例4] \e[92mbash oss.sh \e[91m-s \n\e[0m'
+        echo -e '\e[93m[示例1] \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[0m'
+        echo -e '\e[93m[示例2] \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[0m'
+        echo -e '\e[93m[示例3] \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[91m-r \e[96m"https://www.baidu.com"\e[0m'
+		echo -e '\e[93m[示例4] \e[96mbash oss.sh \e[91m-s \n\e[0m'
         exit 1
         ;;
     esac
 done
+
+stop_()
+{
+kill -9 `ps -a |grep -v "grep" |grep -v "ps" |grep -v "oss.sh" |grep -E 'bash|curl' |awk '{print $1}'`
+exit 1
+}
+
+get_link()
+{
+read -p $(echo -e "\e[93m输入链接开始或输入s停止：\e[96m") l
+case $l in
+	[Ss]*)
+		echo -e "\e[0m"
+		stop_
+		;;
+	*)
+	echo "继续"
+	;;
+esac
+
+echo -e "\e[93m链接为\e[91m $l \e[93m是否确定[Y]？\e[0m" 
+read ll
+case $ll in
+	[Yy]*)
+		echo "开始"
+		;;	
+	*)
+		echo "退出"
+		exit 1
+		;;
+esac
+}
 
 if [ ! -n "$l" ] ;then
 	echo -e "\e[93m[用法]\n\e[93m[下载] \e[92mcurl \e[91m-Lo \e[96moss.sh \e[96mgit.io/jhoss\e[0m"
@@ -35,7 +66,8 @@ if [ ! -n "$l" ] ;then
 	echo -e '\e[93m[示例2] \e[92mbash \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[0m'
 	echo -e '\e[93m[示例3] \e[92mbash \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[91m-r \e[96m"https://www.baidu.com"\e[0m'
 	echo -e '\e[93m[示例4] \e[92mbash oss.sh \e[91m-s \n\e[0m'
-	exit 1
+	#exit 1
+	get_link
 fi
 
 if [ ! -n "$t" ] ;then
