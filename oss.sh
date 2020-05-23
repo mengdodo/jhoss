@@ -99,7 +99,7 @@ while true
 do
 z=$[$RANDOM%11]
 #wget -O /dev/null -o /dev/null -UA=${UAs[$z]} $l 1> /dev/null 2>&1
-curl -o /dev/null -A ${UAs[$z]} $l 1> /dev/null 2>&1
+curl -Lo /dev/null -A ${UAs[$z]} $l 1> /dev/null 2>&1
 done
 }&
 echo "thread $i start!"
