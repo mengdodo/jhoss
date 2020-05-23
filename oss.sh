@@ -17,8 +17,8 @@ do
         exit 1
         ;;
         ?)
-        echo -e "\e[93m[用法]\n\e[93m[下载] \e[92mwget \e[91m-O \e[96moss.sh \e[96mgit.io/jhoss\e[0m"
-        echo -e "\e[93m[用法] \e[91m-l \e[96m<链接(必须)> \e[91m-t \e[96m<线程数> \e[91m-r \e[96m<Referer> \e[91m-s \e[96m<终止>\n\e[0m"
+        echo -e "\e[93m【用法】\n\e[93m[下载] \e[92mwget \e[91m-O \e[96moss.sh \e[96mgit.io/jhoss\e[0m"
+        echo -e "\e[93m[参数] \e[91m-l \e[96m<链接(必须)> \e[91m-t \e[96m<线程数> \e[91m-r \e[96m<Referer> \e[91m-s \e[96m<终止>\n\e[0m"
         echo -e '\e[93m[示例1] \e[92mbash oss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[0m'
         echo -e '\e[93m[示例2] \e[92mbash oss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[0m'
         echo -e '\e[93m[示例3] \e[92mbash oss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[91m-r \e[96m"https://www.baidu.com"\e[0m'
@@ -29,8 +29,8 @@ do
 done
 
 if [ ! -n "$l" ] ;then
-	echo -e "\e[93m[用法]\n\e[93m[下载] \e[92mwget \e[91m-O \e[96moss.sh \e[96mgit.io/jhoss\e[0m"
-	echo -e "\e[93m[用法] \e[91m-l \e[96m<链接(必须)> \e[91m-t \e[96m<线程数> \e[91m-r \e[96m<Referer> \e[91m-s \e[96m<终止>\n\e[0m"
+	echo -e "\e[93m【用法】\n\e[93m[下载] \e[92mwget \e[91m-O \e[96moss.sh \e[96mgit.io/jhoss\e[0m"
+	echo -e "\e[93m[参数] \e[91m-l \e[96m<链接(必须)> \e[91m-t \e[96m<线程数> \e[91m-r \e[96m<Referer> \e[91m-s \e[96m<终止>\n\e[0m"
 	echo -e '\e[93m[示例1] \e[92mbash oss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[0m'
 	echo -e '\e[93m[示例2] \e[92mbash oss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[0m'
 	echo -e '\e[93m[示例3] \e[92mbash oss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[91m-r \e[96m"https://www.baidu.com"\e[0m'
