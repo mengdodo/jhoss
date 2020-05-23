@@ -13,7 +13,7 @@ do
         r=$OPTARG
         ;;
         s)
-        pkill bash && pkill curl
+        kill -9 `ps -a |grep -v "grep" |grep -v "oss.sh" |grep -E 'bash|curl' |awk '{print $1}'`
         exit 1
         ;;
         ?)
