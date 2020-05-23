@@ -15,7 +15,7 @@ do
 while true
 do
 z=$[$RANDOM%12]
-wget -O /dev/null -o /dev/null -U=${UAs[$z]} $uuurl
+curl -o /dev/null -A ${UAs[$z]} -e "https://www.baidu.com" $uuurl
 done
 }&
 echo "thread $i start!"
