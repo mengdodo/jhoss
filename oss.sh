@@ -17,7 +17,8 @@ do
         ;;
         ?)
         echo -e "\e[93m[用法]\n\e[93m[下载] \e[92mcurl \e[91m-Lo \e[96moss.sh \e[96mgit.io/jhoss\e[0m"
-        echo -e "\e[93m[参数] \e[91m-l \e[96m<链接(必须)> \e[91m-t \e[96m<线程数> \e[91m-r \e[96m<Referer> \e[91m-s \e[96m<终止>\n\e[0m"
+        echo -e "\e[93m[参数] \e[91m-l \e[96m<链接> \e[91m-t \e[96m<线程数> \e[91m-r \e[96m<Referer> \e[91m-s \e[96m<终止>\n\e[0m"
+        echo -e '\e[93m[示例0] \e[92mbash \e[96moss.sh \e[93m<按照提示输入参数> \e[0m'
         echo -e '\e[93m[示例1] \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[0m'
         echo -e '\e[93m[示例2] \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[0m'
         echo -e '\e[93m[示例3] \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[91m-r \e[96m"https://www.baidu.com"\e[0m'
@@ -35,7 +36,7 @@ exit 1
 
 get_link()
 {
-read -p $(echo -e "\e[93m输入链接开始或输入s停止：\e[96m") l
+read -p $(echo -e "\e[93m输入[链接]开始或输入[s]停止：\e[96m") l
 case $l in
 	[Ss]*)
 		echo -e "\e[0m"
@@ -61,7 +62,8 @@ esac
 
 if [ ! -n "$l" ] ;then
 	echo -e "\e[93m[用法]\n\e[93m[下载] \e[92mcurl \e[91m-Lo \e[96moss.sh \e[96mgit.io/jhoss\e[0m"
-	echo -e "\e[93m[参数] \e[91m-l \e[96m<链接(必须)> \e[91m-t \e[96m<线程数> \e[91m-r \e[96m<Referer> \e[91m-s \e[96m<终止>\n\e[0m"
+	echo -e "\e[93m[参数] \e[91m-l \e[96m<链接> \e[91m-t \e[96m<线程数> \e[91m-r \e[96m<Referer> \e[91m-s \e[96m<终止>\n\e[0m"
+	echo -e '\e[93m[示例0] \e[92mbash \e[96moss.sh \e[93m<按照提示输入参数> \e[0m'
 	echo -e '\e[93m[示例1] \e[92mbash \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[0m'
 	echo -e '\e[93m[示例2] \e[92mbash \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[0m'
 	echo -e '\e[93m[示例3] \e[92mbash \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[91m-r \e[96m"https://www.baidu.com"\e[0m'
