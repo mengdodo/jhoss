@@ -21,7 +21,7 @@ do
         echo -e '\e[93m[示例1] \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[0m'
         echo -e '\e[93m[示例2] \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[0m'
         echo -e '\e[93m[示例3] \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[91m-r \e[96m"https://www.baidu.com"\e[0m'
-		echo -e '\e[93m[示例4] \e[96mbash oss.sh \e[91m-s \n\e[0m'
+		echo -e '\e[93m[示例4] \e[92mbash \e[96moss.sh \e[91m-s \n\e[0m'
         exit 1
         ;;
     esac
@@ -65,7 +65,7 @@ if [ ! -n "$l" ] ;then
 	echo -e '\e[93m[示例1] \e[92mbash \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[0m'
 	echo -e '\e[93m[示例2] \e[92mbash \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[0m'
 	echo -e '\e[93m[示例3] \e[92mbash \e[96moss.sh \e[91m-l \e[96m"https://www.baidu.com" \e[91m-t \e[96m8 \e[91m-r \e[96m"https://www.baidu.com"\e[0m'
-	echo -e '\e[93m[示例4] \e[92mbash oss.sh \e[91m-s \n\e[0m'
+	echo -e '\e[93m[示例4] \e[92mbash \e[96moss.sh \e[91m-s \n\e[0m'
 	#exit 1
 	get_link
 fi
