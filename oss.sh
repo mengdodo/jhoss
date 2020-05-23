@@ -15,7 +15,8 @@ do
 while true
 do
 z=$[$RANDOM%12]
-wget -O /dev/null -o /dev/null -UA=${UAs[$z]} $uuurl &
+#wget -O /dev/null -o /dev/null -UA=${UAs[$z]} $uuurl &
+curl -o /dev/null $uuurl 2>>/dev/null
 done
 }&
 echo "thread $i start!"
