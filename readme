@@ -1,3 +1,7 @@
+刷目标机器CDN流量一键脚本
 wget -O oss.sh git.io/jhoss
 bash oss.sh "https://www.baidu.com" &  #指定url
 bash oss.sh "https://www.baidu.com" 8 & #指定url和8线程
+
+要停止的话
+pkill bash && pkill wget
