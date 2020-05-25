@@ -1,0 +1,3 @@
+wget -O oss.sh git.io/jhoss
+bash oss.sh "https://www.baidu.com" &  #指定url
+bash oss.sh "https://www.baidu.com" 8 & #指定url和8线程
